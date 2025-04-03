@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 import 'package:movie_app/model/home_model.dart';
 
 class HomeViewModel {
-  final String url = "https://freetestapi.com/api/v1/movies";
+  final String url = "https://www.apirequest.in/movie/api";
 
   Future<List<HomeModel>?> fetchMovie() async {
     Uri uri = Uri.parse(url);

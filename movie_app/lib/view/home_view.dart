@@ -43,8 +43,19 @@ class _HomeViewState extends State<HomeView> {
         return ListTile(
           title: Text(movies[index].title!),
           subtitle: Text(movies[index].year!.toString()),
-          leading: CircleAvatar(
-            backgroundImage: NetworkImage(movies[index].poster!),
+          leading: ClipOval(
+            child: Image.network(
+              movies[index].poster!.replaceFirst(
+                "http://",
+                "https://",
+              ), // HTTP'yi HTTPS yap
+              width: 50,
+              height: 50,
+              fit: BoxFit.cover,
+              errorBuilder: (context, error, stackTrace) {
+                return Icon(Icons.broken_image, size: 50);
+              },
+            ),
           ),
         );
       },
