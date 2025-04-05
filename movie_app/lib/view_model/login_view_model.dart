@@ -7,6 +7,10 @@ import 'package:movie_app/view/home_view.dart';
 import 'package:movie_app/view/sign_up_view.dart';
 
 class LoginViewModel {
+  // Netflix'in resmi arka plan görseli ve logosu için sabit URL'ler
+  String backgroundImageUrl =
+      'https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88b/a3873901-5b7c-46eb-b9fa-12ffd1dfe371/TR-tr-20240129-popsignuptwoweeks-perspective_alpha_website_medium.jpg';
+
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   bool isLoading = false;

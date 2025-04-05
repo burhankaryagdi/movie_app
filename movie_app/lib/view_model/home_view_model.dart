@@ -4,6 +4,8 @@ import 'package:http/http.dart' as http;
 import 'package:movie_app/model/home_model.dart';
 
 class HomeViewModel {
+  String backgroundImageUrl =
+      'https://assets.nflxext.com/ffe/siteui/vlv3/9d3533b2-0e2b-40b2-95e0-ecd7979cc88b/a3873901-5b7c-46eb-b9fa-12ffd1dfe371/TR-tr-20240129-popsignuptwoweeks-perspective_alpha_website_medium.jpg';
   final String url = "https://www.apirequest.in/movie/api";
 
   Future<List<HomeModel>?> fetchMovie() async {
